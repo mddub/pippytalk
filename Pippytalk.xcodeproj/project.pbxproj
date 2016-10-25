@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4CACBDF21C0B6F6D006A9937 /* nRF8001-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nRF8001-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CACBDF21C0B6F6D006A9937 /* Pippytalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippytalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CACBDF51C0B6F6D006A9937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CACBDF71C0B6F6D006A9937 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4CACBDFA1C0B6F6D006A9937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		4CACBDF31C0B6F6D006A9937 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CACBDF21C0B6F6D006A9937 /* nRF8001-Swift.app */,
+				4CACBDF21C0B6F6D006A9937 /* Pippytalk.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4CACBDF11C0B6F6D006A9937 /* nRF8001-Swift */ = {
+		4CACBDF11C0B6F6D006A9937 /* Pippytalk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4CACBE041C0B6F6D006A9937 /* Build configuration list for PBXNativeTarget "nRF8001-Swift" */;
+			buildConfigurationList = 4CACBE041C0B6F6D006A9937 /* Build configuration list for PBXNativeTarget "Pippytalk" */;
 			buildPhases = (
 				4CACBDEE1C0B6F6D006A9937 /* Sources */,
 				4CACBDEF1C0B6F6D006A9937 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "nRF8001-Swift";
+			name = Pippytalk;
 			productName = "nRF8001-Swift";
-			productReference = 4CACBDF21C0B6F6D006A9937 /* nRF8001-Swift.app */;
+			productReference = 4CACBDF21C0B6F6D006A9937 /* Pippytalk.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4CACBDED1C0B6F6D006A9937 /* Build configuration list for PBXProject "nRF8001-Swift" */;
+			buildConfigurationList = 4CACBDED1C0B6F6D006A9937 /* Build configuration list for PBXProject "Pippytalk" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4CACBDF11C0B6F6D006A9937 /* nRF8001-Swift */,
+				4CACBDF11C0B6F6D006A9937 /* Pippytalk */,
 			);
 		};
 /* End PBXProject section */
@@ -263,7 +263,7 @@
 				DEVELOPMENT_TEAM = 85XUVBC7YX;
 				INFOPLIST_FILE = "nRF8001-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.xonaymedia.nRF8001-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.warkmilson.pippytalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -276,7 +276,7 @@
 				DEVELOPMENT_TEAM = 85XUVBC7YX;
 				INFOPLIST_FILE = "nRF8001-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.xonaymedia.nRF8001-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.warkmilson.pippytalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -285,7 +285,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4CACBDED1C0B6F6D006A9937 /* Build configuration list for PBXProject "nRF8001-Swift" */ = {
+		4CACBDED1C0B6F6D006A9937 /* Build configuration list for PBXProject "Pippytalk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CACBE021C0B6F6D006A9937 /* Debug */,
@@ -294,7 +294,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4CACBE041C0B6F6D006A9937 /* Build configuration list for PBXNativeTarget "nRF8001-Swift" */ = {
+		4CACBE041C0B6F6D006A9937 /* Build configuration list for PBXNativeTarget "Pippytalk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CACBE051C0B6F6D006A9937 /* Debug */,
