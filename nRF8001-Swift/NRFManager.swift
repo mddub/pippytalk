@@ -47,7 +47,7 @@ open class NRFManager:NSObject, CBCentralManagerDelegate, UARTPeripheralDelegate
     }
     
     //Public Properties
-    open var verbose = false
+    open var verbose = true
     open var autoConnect = true
     open var delegate:NRFManagerDelegate?
 
@@ -147,12 +147,12 @@ extension NRFManager {
 // MARK: - Public Methods
 extension NRFManager {
     
-    public func connect(_ arduinoName: String) {
+    public func connect() {
         if currentPeripheral != nil && connectionStatus == .connected {
             log("Asked to connect, but already connected!")
             return
         }
-        self.arduinoToConnect = arduinoName
+        self.arduinoToConnect = "Adafruit Bluefruit LE"
         scanForPeripheral()
     }
     
@@ -203,7 +203,7 @@ extension NRFManager {
                 //respond to powered on
                 log("Powered on!")
                 if (autoConnect) {
-                    connect("")
+                    connect()
                 }
                 
             } else if central.state == .poweredOff {
@@ -249,7 +249,7 @@ extension NRFManager {
             }
             
             if autoConnect {
-                connect("")
+                connect()
             }
         }
     

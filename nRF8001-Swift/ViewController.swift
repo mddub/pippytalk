@@ -12,23 +12,13 @@ class ViewController: UIViewController, NRFManagerDelegate {
     
     var nrfManager:NRFManager!
     var feedbackView = UITextView()
+
+    var nextSoundIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nrfManager = NRFManager(
-            onConnect: {
-                self.log("C: ★ Connected")
-            },
-            onDisconnect: {
-                self.log("C: ★ Disconnected")
-            },
-            onData: {
-                (data:Data?, string:String?)->() in
-                self.log("C: ⬇ Received data - String: \(string) - Data: \(data)")
-            },
-            autoConnect: false
-        )
+        nrfManager = NRFManager()
         
         nrfManager.verbose = true
         nrfManager.delegate = self
@@ -38,9 +28,10 @@ class ViewController: UIViewController, NRFManagerDelegate {
     
     func sendData()
     {
-        let string = "Whoot!"
+        let string = "\(nextSoundIndex)"
         let result = self.nrfManager.writeString(string)
-        log("⬆ Sent string: \(string) - Result: \(result)")
+        log("↑ Sent string: \(string) - Result: \(result)")
+        nextSoundIndex = (nextSoundIndex + 1) % 9
     }
 }
 
@@ -49,16 +40,16 @@ extension ViewController
 {
     func nrfDidConnect(_ nrfManager:NRFManager)
     {
-        self.log("D: ★ Connected")
+        self.log("★ Connected")
     }
     
     func nrfDidDisconnect(_ nrfManager:NRFManager)
     {
-        self.log("D: ★ Disconnected")
+        self.log("★ Disconnected")
     }
     
     func nrfReceivedData(_ nrfManager:NRFManager, data: Data?, string: String?) {
-        self.log("D: ⬇ Received data - String: \(string) - Data: \(data)")
+        self.log("↓ Received data - String: \(string) - Data: \(data)")
     }
 }
 
