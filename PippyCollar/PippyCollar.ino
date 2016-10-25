@@ -67,18 +67,12 @@ void loop(void) {
     ble.readline();                     // Read outcome
     Serial.print("received: ");
     Serial.println(ble.buffer);
-    if(!strncmp(ble.buffer, "!B", 2) && // Controller button command
-       checkCRC(255-'!'-'B', 4)      && // Verify checksum
-       (ble.buffer[3] == '1')) {        // Button press? 1=press 0=release
-      play(ble.buffer[2] - '1');
+    uint8_t track = ble.buffer[0] - '0';
+    if (track < 9) {
+      play(track);
     }
     ble.waitForOK();
   }
-}
-
-boolean checkCRC(uint8_t sum, uint8_t CRCindex) {
-  for(uint8_t i=2; i<CRCindex; i++) sum -= (uint8_t)ble.buffer[i];
-  return ((uint8_t)ble.buffer[CRCindex] == sum);
 }
 
 void play(uint16_t i) {
