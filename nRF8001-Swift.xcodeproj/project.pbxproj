@@ -99,7 +99,7 @@
 				TargetAttributes = {
 					4CACBDF11C0B6F6D006A9937 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 54JDK55DR5;
+						DevelopmentTeam = 85XUVBC7YX;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -260,7 +260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 54JDK55DR5;
+				DEVELOPMENT_TEAM = 85XUVBC7YX;
 				INFOPLIST_FILE = "nRF8001-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.xonaymedia.nRF8001-Swift";
@@ -273,7 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 54JDK55DR5;
+				DEVELOPMENT_TEAM = 85XUVBC7YX;
 				INFOPLIST_FILE = "nRF8001-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.xonaymedia.nRF8001-Swift";
