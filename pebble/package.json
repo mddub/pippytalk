@@ -1,0 +1,28 @@
+{
+  "name": "Pippytalk",
+  "author": "Mark Wilson",
+  "version": "0.1.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "Pippytalk",
+    "uuid": "a9931d36-1041-44a2-a8ba-e0e96cf114bc",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "messageKeys": {
+      "sound": 0
+    },
+    "resources": {
+      "media": []
+    }
+  }
+}
