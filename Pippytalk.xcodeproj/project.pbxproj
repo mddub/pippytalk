@@ -13,7 +13,24 @@
 		4CACBDFD1C0B6F6D006A9937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CACBDFC1C0B6F6D006A9937 /* Assets.xcassets */; };
 		4CACBE001C0B6F6D006A9937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CACBDFE1C0B6F6D006A9937 /* LaunchScreen.storyboard */; };
 		4CACBE081C0B6F7D006A9937 /* NRFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CACBE071C0B6F7D006A9937 /* NRFManager.swift */; };
+		4D4355911DC40D16007901E3 /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4355901DC40D16007901E3 /* PebbleKit.framework */; };
+		4D4355941DC40DB4007901E3 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4355931DC40DB4007901E3 /* ExternalAccessory.framework */; };
+		4D4355961DC40DBF007901E3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4355951DC40DBF007901E3 /* CoreBluetooth.framework */; };
+		4D4355981DC41174007901E3 /* PebbleKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D4355901DC40D16007901E3 /* PebbleKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D4355971DC41163007901E3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D4355981DC41174007901E3 /* PebbleKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4CACBDF21C0B6F6D006A9937 /* Pippytalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippytalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +41,9 @@
 		4CACBDFF1C0B6F6D006A9937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CACBE011C0B6F6D006A9937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CACBE071C0B6F7D006A9937 /* NRFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRFManager.swift; sourceTree = "<group>"; };
+		4D4355901DC40D16007901E3 /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PebbleKit.framework; path = Frameworks/PebbleKit.framework; sourceTree = "<group>"; };
+		4D4355931DC40DB4007901E3 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		4D4355951DC40DBF007901E3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4355961DC40DBF007901E3 /* CoreBluetooth.framework in Frameworks */,
+				4D4355941DC40DB4007901E3 /* ExternalAccessory.framework in Frameworks */,
+				4D4355911DC40D16007901E3 /* PebbleKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +65,8 @@
 			children = (
 				4CACBDF41C0B6F6D006A9937 /* nRF8001-Swift */,
 				4CACBDF31C0B6F6D006A9937 /* Products */,
+				4D4355901DC40D16007901E3 /* PebbleKit.framework */,
+				4D4355921DC40DB3007901E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +92,15 @@
 			path = "nRF8001-Swift";
 			sourceTree = "<group>";
 		};
+		4D4355921DC40DB3007901E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D4355951DC40DBF007901E3 /* CoreBluetooth.framework */,
+				4D4355931DC40DB4007901E3 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +111,7 @@
 				4CACBDEE1C0B6F6D006A9937 /* Sources */,
 				4CACBDEF1C0B6F6D006A9937 /* Frameworks */,
 				4CACBDF01C0B6F6D006A9937 /* Resources */,
+				4D4355971DC41163007901E3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -261,6 +296,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 85XUVBC7YX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "nRF8001-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.warkmilson.pippytalk;
@@ -274,6 +314,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 85XUVBC7YX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "nRF8001-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.warkmilson.pippytalk;
