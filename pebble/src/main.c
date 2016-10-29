@@ -23,7 +23,7 @@ static void send_message(const char * message) {
 }
 
 static void tap_handler(AccelAxisType axis, int32_t direction) {
-  if (time(NULL) - last_vibe_start > 2) {
+  if (time(NULL) - last_vibe_start > 1) {
     send_message("0");
   }
 }
