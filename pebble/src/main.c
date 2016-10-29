@@ -4,6 +4,7 @@
 
 static Window *s_window;
 static TextLayer *s_text_layer;
+static TextLayer *s_connected_text;
 
 static time_t last_vibe_start = 0;
 
@@ -14,12 +15,10 @@ static void send_message(const char * message) {
 
   text_layer_set_text(s_text_layer, message);
 
-  /*
   DictionaryIterator *iter;
   app_message_outbox_begin(&iter);
   dict_write_cstring(iter, MESSAGE_KEY_sound, message);
   app_message_outbox_send();
-  */
 }
 
 static void tap_handler(AccelAxisType axis, int32_t direction) {
@@ -67,11 +66,19 @@ static void click_config_provider(void *context) {
   window_long_click_subscribe(BUTTON_ID_DOWN, LONG_CLICK_DELAY_MS, down_long_click_handler, NULL);
 }
 
+static void in_received_handler(DictionaryIterator *received, void *context) {
+  text_layer_set_text(s_connected_text, "connected");
+}
+
+static void in_dropped_handler(AppMessageResult reason, void *context) {}
+
 static void out_failed_handler(DictionaryIterator *failed, AppMessageResult reason, void *context) {
   text_layer_set_text(s_text_layer, "failed");
 }
 
 static void window_load(Window *window) {
+  app_message_register_inbox_received(in_received_handler);
+  app_message_register_inbox_dropped(in_dropped_handler);
   app_message_register_outbox_failed(out_failed_handler);
   app_message_open(256, 256);
 
@@ -82,6 +89,11 @@ static void window_load(Window *window) {
   text_layer_set_font(s_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
   text_layer_set_text_alignment(s_text_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_text_layer));
+
+  s_connected_text = text_layer_create(GRect(0, 130, bounds.size.w, 32));
+  text_layer_set_font(s_connected_text, fonts_get_system_font(FONT_KEY_GOTHIC_14));
+  text_layer_set_text_alignment(s_connected_text, GTextAlignmentCenter);
+  layer_add_child(window_layer, text_layer_get_layer(s_connected_text));
 }
 
 static void window_unload(Window *window) {
