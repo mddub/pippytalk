@@ -20,7 +20,7 @@ This project has 5 components:
 
 * **iPhone app**: see `Pippytalk.xcodeproj`. This is a hastily-modified version of [nRF8001-Swift](https://github.com/MichMich/nRF8001-Swift) by [Michael Teeuw](https://github.com/MichMich/nRF8001-Swift). It forwards messages from the Pebble watch to the Feather board.
 
-* **Pebble app**: see `pebble/`. Use the [Pebble SDK](https://developer.pebble.com/sdk/) or [CloudPebble](https://cloudpebble.net/) to build and install.
+* **Pebble app**: see `pebble/`. Use the [Pebble SDK](https://developer.pebble.com/sdk/) or [CloudPebble](https://cloudpebble.net/) to build and install. To install a pre-built version, click [this link](https://raw.githubusercontent.com/mddub/pippytalk/master/pebble/prebuilt/pippytalk.pbw) on your phone, and choose to open the file in the Pebble app.
 
 * **Sounds**: see `sounds/`. My samples are released under the MIT license; the two from "Up" are used without permission.
 
@@ -36,7 +36,7 @@ I hadn't done much soldering or circuit work before this. Maybe my mistakes will
 
 * For two boards to communicate over UART, they must share a common ground, not be powered by two different USB batteries. If you think about voltage and signals for about 10 seconds, you'll understand why. Apparently I didn't have 10 seconds to spare during the few days I spent adding debug statements in Adafruit's Arduino libraries, cycling through boards, doubting my multimeter, and resoldering every joint.
 
-* If you are trying to sense "taps" (shakes) on the Pebble, know that vibrating the watch (`vibe_short_pulse`, etc.) can also trigger a tap. So if you vibrate the watch to give the user feedback when they shake their wrist, you may end up giving him/her a lot more feedback than intended.
+* If you are trying to sense "taps" (shakes) on the Pebble, know that vibrating the watch (`vibe_short_pulse`, etc.) can also trigger a tap. So if you vibrate the watch to give the user feedback when they shake their wrist, you may end up giving them a lot more feedback than intended.
 
 ## Photos
 
